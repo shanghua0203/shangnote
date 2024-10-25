@@ -33,5 +33,5 @@ Clock Speed | 16MHz
 PWM (Pulse Width Modulation)  
 脈波寬度調變
 ```
-![PWM](image\PWM.png)
-![pin](image\Pin.png)
+![PWM](image/PWM.png)
+![pin](image/Pin.png)
