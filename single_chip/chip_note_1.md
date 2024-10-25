@@ -14,7 +14,7 @@ Single Chip 01
 CSIE：複雜指令集
 EISC：精簡指令集  
 ```
-![arduino_UNO](image\Arduino_Pin.png)
+![arduino_UNO](single_chip\image\Arduino_Pin.png)
 
 | Microcontroller | ATmega | 
 |:--------|--------:| 
