@@ -16,8 +16,9 @@ EISC：精簡指令集
 ```
 ![arduino_UNO](image/Arduino_Pin.png)
 
-| Microcontroller | ATmega | 
-|:--------|--------:| 
+| 1 | 2 | 
+|:-|-:| 
+| Microcontroller | ATmega |
 Operating Voltage|5V
 Input Voltage(recommended)| 7-12V
 input Voltage(limits)|6-20V
