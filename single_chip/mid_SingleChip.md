@@ -38,22 +38,22 @@ void setup(){
 
 void forward(int T){
     servoLeft.writeMicroseconds(1700);
-    servoRigh.writeMicroseconds(1300);
+    servoRight.writeMicroseconds(1300);
     delay(T);
 }
 void turnLeft(int T){
     servoLeft.writeMicroseconds(1300);
-    servoRigh.writeMicroseconds(1300);
+    servoRight.writeMicroseconds(1300);
     delay(T);
 }
-void forRight(int T){
+void turnRight(int T){
     servoLeft.writeMicroseconds(1700);
-    servoRigh.writeMicroseconds(1700);
+    servoRight.writeMicroseconds(1700);
     delay(T);
 }
 void backward(int T){
     servoLeft.writeMicroseconds(1300);
-    servoRigh.writeMicroseconds(1700);
+    servoRight.writeMicroseconds(1700);
     delay(T);
 }
 
