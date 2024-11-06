@@ -62,7 +62,7 @@ void loop(){
        while(digitalRead(3)!=1);
 
     while(true){
-        fot(i = 0; i<8; i++){
+        for(i = 0; i<8; i++){
             digitalWrite(LedPin[i], HIGH);
             delay(1000);
             digitalWrite(LedPin[i], LOW);
