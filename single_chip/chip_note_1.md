@@ -16,7 +16,7 @@ EISC：精簡指令集
 ```
 ![arduino_UNO](image/Arduino_Pin.png)
 
-| 1 | 2 | 
+| 規格 |  | 
 |:-|-:| 
 | Microcontroller | ATmega |
 Operating Voltage|5V
