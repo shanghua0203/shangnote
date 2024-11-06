@@ -28,22 +28,39 @@
 ## 第三題 伺服器馬達控制程式設計
 ```
 # include<Servo.h>
+Servo servoLeft;
+Servo servoRight;
 
-Servo myServo;  //創建Servo物件
-
-vois setup(){
-    myServo.attach(9);   //將伺服馬達連接到9號腳位
+void setup(){
+    servoLeft.attach(13);
+    servoRight.attach(12);
 }
 
-void loop(){
-    myServo.write(0);   //轉到0度
-    delay(1000);        //停1秒
-    myServo.write(90);
-    delay(1000);
-    myServo.write(180)
-    delay(1000)
+void forward(int T){
+    servoLeft.writeMicroseconds(1700);
+    servoRigh.writeMicroseconds(1300);
+    delay(T);
+}
+void turnLeft(int T){
+    servoLeft.writeMicroseconds(1300);
+    servoRigh.writeMicroseconds(1300);
+    delay(T);
+}
+void forRight(int T){
+    servoLeft.writeMicroseconds(1700);
+    servoRigh.writeMicroseconds(1700);
+    delay(T);
+}
+void backward(int T){
+    servoLeft.writeMicroseconds(1300);
+    servoRigh.writeMicroseconds(1700);
+    delay(T);
 }
 
+void disableServos(){
+    servoLeft.detach();
+    servoRight.detach();
+}
 ```
 
 ## 第四題 認證第一關跑馬燈的程式設計
