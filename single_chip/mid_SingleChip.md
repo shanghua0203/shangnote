@@ -49,40 +49,28 @@ void loop(){
 ## 第四題 認證第一關跑馬燈的程式設計
 ```
 int LedPin[] = {6, 7, 8, 9, 10, 11, 12 ,13};    //定義腳位
-int LedS[8] = [0, 0, 0, 0, 1, 1, 1, 1];          //定義Led開關
-int i,j;
+int i;
 
 void setup(){
     for(i=0; i<8; i++){
-        pinMode(LedPin[i], OUTPUT);      //設定LED腳位為輸出
-        pinMode(3, INPUT);              //設定按鈕腳位3為輸入
+        pinMode(LedPin[i], OUTPUT); //設定LED腳位為輸出
     }
+    pinMode(3, INPUT);              //設定按鈕腳位3為輸入
 }
     
 void loop(){
        while(digitalWrite(3)!=1);
 
     while(true){
-       for(i=0; i<5; i++){
-           for(j=0; j<8; j++){
-               digitalWrite(LdPin[j], LedS[j]);      //設定i腳位
-            }   
-            delay(800);
-            for(j=7; j>=0; j--){
-               digitalWrite(LedPin[j], Leds[7-j]);   //設定i腳位
-            }
-            delay(800);
+        fot(i = 0; i<8; i++){
+            digitalWrite(LedPin[i], HIGH);
+            delay(1000);
+            digitalWrite(LedPin[i], LOW);
         }
+        tone(4, 1047, 1000);
+        delay(1000);
     }
-    tone(4, 1976, 300);
-    delay(3000);
 }
-
-
-
-
-
-
 
 
 ```
