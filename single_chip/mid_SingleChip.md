@@ -59,7 +59,7 @@ void setup(){
 }
     
 void loop(){
-       while(digitalWrite(3)!=1);
+       while(digitalRead(3)!=1);
 
     while(true){
         fot(i = 0; i<8; i++){
