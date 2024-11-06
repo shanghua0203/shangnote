@@ -67,7 +67,32 @@ void disableServos(){
 ```
 #include<Servo>
 Servo servoLeft;
+Servo servoRight;
 
+void setup(){
+    servoLeft.attach(12);
+    servoRight.attach(13);
+
+    servoLeft.writeMicroseconds(1700);
+    servoLeft.writeMicroseconds(1300);
+    delay(2000);
+
+    servoLeft.writeMicroseconds(1300);
+    servoRight.writeMicroseconds(1300);
+    delay(2000);
+
+    servoLeft.writeMicroseconds(1700);
+    servoRight.writeMicroseconds(1700);
+    delay(2000);
+
+    servoLeft.writeMicroseconds(1300);
+    servoRight.writeMicroseconds(1700);
+    delay(2000)
+}
+
+void loop(){
+
+}
 
 ```
 
@@ -99,6 +124,32 @@ void loop(){
 
 
 ```
+
+```
+int LedPin[] = {6, 7, 8, 9, 10, 11, 12, 13};
+int i;
+
+void setup(){
+    for(i=0; i<8; i++){
+        pinMode(LedPin[i], OUTPUT);
+    }
+    pinMode(3, INPUT);
+}
+
+void loop(){
+    while(digitalWrite(3)!=1);
+
+    while(true){
+        for(i=0; i<8; i++){
+            pinMode(LedPin[i],HIGH);
+            delay(1000);
+            pinMode(LedPin[i],LOW);
+        }
+        tone(4, 1074, 1000);
+        delay(1000);
+    }
+}
+``
 
 
 
