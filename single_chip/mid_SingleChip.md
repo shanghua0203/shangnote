@@ -64,6 +64,13 @@ void disableServos(){
 }
 ```
 
+```
+#include<Servo>
+Servo servoLeft;
+
+
+```
+
 ## 第四題 認證第一關跑馬燈的程式設計
 ```
 int LedPin[] = {6, 7, 8, 9, 10, 11, 12 ,13};    //定義腳位
