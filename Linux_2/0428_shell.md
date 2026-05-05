@@ -139,3 +139,41 @@ echo $?
 
 - 比較運算式
 ![testeq](pic/testeq.png)
+
+
+## 腳本
+![root](pic/root.png)  
+當以一般使用者身分執行時，條件不成立，輸出 change to root first。    
+透過 sudo su 指令切換至 root 身分後執行，條件成立，成功輸出 You are root now[cite: 1]。
+
+### 迴圈控制
+```
+#!/usr/bin/bash
+
+for filename in $(ls /tmp)
+do
+    echo $filename
+done
+```
+* **執行結果分析**：
+  * 透過 `$(ls /tmp)` 取得 `/tmp` 目錄下的所有檔案與目錄清單[cite: 1]。
+  * `for` 迴圈會將清單中的項目逐一賦值給變數 `filename`，並透過 `echo` 依序印出於終端機畫面上[cite: 1]。
+
+## sed (Stream Editor)
+### 插入文字 (i)
+- 指令：`sed "/Linux/i newline" test.txt`
+- 功能：在所有包含 "Linux" 字串的行之前，插入一行新文字 "newline"。
+- 觀察：你會發現 "HELLO LINUX!" 那行沒有變動，這是因為 sed 預設會區分大小寫。
+
+### 刪除特定行 (d)
+- 按關鍵字刪除：`sed "/Linux/d"` 會刪除所有包含 "Linux" 的行。
+- 刪除單一行號：`sed "1d"` 代表刪除文件的第 1 行。
+- 刪除行號範圍：`sed "1,3d"` 代表刪除第 1 到第 3 行。
+
+### 同時執行多個操作 (-e)
+- 指令：`sed -e "1d" -e "3d" test.txt`
+- 能：使用 -e 參數可以一次執行多個編輯指令。這裡的操作是同時刪除第 1 行與第 3 行。
+
+### 輔助指令 cat
+- 指令：`cat -n test.txt`
+- 功能：印出文件內容，並加上行號 (-n)。這在執行 sed 刪除特定行號前，是非常重要的確認步驟。
